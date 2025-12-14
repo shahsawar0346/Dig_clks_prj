@@ -1,0 +1,67 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h2{
+    margin-bottom: 250px;
+    
+  }
+  /* Background and font styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container for the clock */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* Clock styling */
+  .clock {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    background: linear-gradient(135deg, #db0d06, #feb47b);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .clock span {
+    margin: 0 5px;
+  }
+  
+  /* Colon (:) color */
+  #colon {
+    color: #f8f8f8;
+    font-size: 3rem;
+  }
+  
+  /* AM/PM styling */
+  #secssion {
+    font-size: 2rem;
+    color: #f8f8f8;
+    margin-left: 10px;
+  }
+  
+  /* Hover effect for clock */
+  .clock:hover {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  

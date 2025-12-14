@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="clock">
+        <span id="hours">00</span>
+        <span id="colon">:</span>
+        <span id="minutes">00</span>
+        <span id="colon">:</span>
+        <span id="second">00</span>
+        <span id="secssion">PM</span>
+      </div>
+    </div>
+
+    <script>
+      function displayTime() {
+        var datetime = new Date();
+        var hr = datetime.getHours();
+        var min = datetime.getMinutes();
+        var sec = datetime.getSeconds();
+        var session = document.getElementById("secssion");
+
+        // Format hours for 12-hour clock
+        if (hr >= 12) {
+          session.innerHTML = "PM";
+        } else {
+          session.innerHTML = "AM";
+        }
+
+        // Convert to 12-hour format
+        if (hr > 12) {
+          hr = hr - 12;
+        }
+        
+        // Zero padding for minutes and seconds
+        if (min < 10) min = "0" + min;
+        if (sec < 10) sec = "0" + sec;
+
+        document.getElementById("hours").innerHTML = hr;
+        document.getElementById("minutes").innerHTML = min;
+        document.getElementById("second").innerHTML = sec;
+      }
+
+      setInterval(displayTime, 1000);  // Update every second
+    </script>
+  </body>
+</html>
